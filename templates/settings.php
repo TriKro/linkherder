@@ -1,37 +1,15 @@
 <div class="wrap">
-<h2 style="float:left;">Keyword Strategy</h2>
+<h2 style="float:left;">LinkHerder</h2>
 
 <h2 class="nav-tab-wrapper">
 <a class="nav-tab nav-tab-active" href="<?= LINKHERDER_ADMIN_URL ?>">Overview</a>
-	<a class="nav-tab" href="<?= LINKHERDER_ADMIN_URL . '&kws_action=inpage' ?>">Insert Keywords</a>
-	<a class="nav-tab" href="<?= LINKHERDER_ADMIN_URL . '&kws_action=related' ?>">Links Needed</a>
+	<a class="nav-tab" href="<?= LINKHERDER_ADMIN_URL . '&kws_action=inpage' ?>">Manage Keywords</a>
 </h2>
 
 <? if (! function_exists('get_admin_url')): ?>
 <p style="color:red;">Your WordPress version is not supported. Please update.</p>
 <? endif; ?>
 
-<? if ($kws_options['username'] && !isset($_GET['kws_login_error'])): ?>
-<p>Current login: <b><?= htmlspecialchars($kws_options['username']) ?></b> <input type="button" class="button" value="Change login" style="margin-top: 15px;" onclick="document.getElementById('kws-login-box').style.display='block';this.parentNode.style.display='none';" /></p>
-<div style="display:none;" id="kws-login-box">
-<? else: ?>
-<div>
-<? endif; ?>
-<h3> Keyword Strategy login </h3>
-<form method="post" action="">
-	<? if (isset($_GET['kws_login_error'])): ?> <p style="color:red;"><?= htmlspecialchars($_GET['kws_login_error']) ?></p> <? endif; ?>
-	<input type="hidden" name="kws_action" value="login" />
-	<div class="form-wrap">
-		<label for="kws-username">Username</label>
-		<input id="kws-username" name="kws-username" type="text" value="<?= htmlspecialchars(isset($_GET['kws_username'])? $_GET['kws_username'] : $kws_options['username']) ?>" aria-required="true" size="40" />
-		<label for="kws-password">Password</label>
-		<input id="kws-password" name="kws-password" type="password" value="" aria-required="true" size="40" />
-	</div>
-	<p class="submit"><input type="submit" class="button" value="Save" /></p> 
-</form>
-</div>
-
-<? if ($kws_options['username']): ?>
 	<? if ($kws_options['update_error']): ?>
 		<p style="color:red;">Keywords update error: <?= htmlspecialchars($kws_options['update_error']) ?></p>
 	<? endif; ?>
@@ -110,6 +88,5 @@
 <p>
 	Tip: You can put some text inside <b><i>&lt;kwsignore&gt;&lt;/kwsignore&gt;</i></b> tags to avoid plugin inserting links inside.
 </p>
-<? endif; ?>
 
 </div>

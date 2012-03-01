@@ -1,10 +1,9 @@
 <div class="wrap">
-<h2 style="float:left;">Keyword Strategy</h2>
+<h2 style="float:left;">LinkHerder</h2>
 
 <h2 class="nav-tab-wrapper">
 <a class="nav-tab " href="<?= LINKHERDER_ADMIN_URL ?>">Overview</a>
-	<a class="nav-tab nav-tab-active" href="<?= LINKHERDER_ADMIN_URL . '&kws_action=inpage' ?>">Insert Keywords</a>
-	<a class="nav-tab" href="<?= LINKHERDER_ADMIN_URL . '&kws_action=related' ?>">Links Needed</a>
+	<a class="nav-tab nav-tab-active" href="<?= LINKHERDER_ADMIN_URL . '&kws_action=inpage' ?>">Manage Keywords</a>
 </h2>
 
 <p>

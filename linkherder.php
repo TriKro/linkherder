@@ -35,7 +35,6 @@ if (! function_exists('get_admin_url'))
 }
 define('LINKHERDER_ADMIN_URL', get_admin_url(null, 'options-general.php?page=linkherder'));
 
-
 if ( is_admin() ) {
 	if ( defined('DOING_AJAX') && DOING_AJAX ) {
 		// no AJAX in this plugin
